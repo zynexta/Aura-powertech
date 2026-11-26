@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #F47721;
+  --color-brand-orange-hover: #E06512;
+  --color-brand-orange-light: #FFF4ED;
+  --color-brand-blue: #30358B;
+  --color-brand-blue-dark: #1F2363;
+  --color-brand-blue-deep: #12153D;
+  --color-brand-blue-light: #454CB8;
+  --color-brand-slate: #0F172A;
+
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  overflow-x: hidden;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color-scheme: light;
+  background-color: #FAFAFB;
+  color: #1E293B;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Prevent auto-zoom on iOS when tapping input fields */
+@media screen and (max-width: 767px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Hide scrollbars for clean horizontal filter carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glassmorphism subtle polish */
+.glass-nav-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+}
+
+.glass-nav-transparent {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.2) 60%, transparent 100%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* ==========================================================================
+   AURA POWERTECH SOLUTIONS — ELEGANT SOLAR ARCHITECTURAL TYPOGRAPHY SYSTEM
+   Outfit (Clean Circular Geometric Display) & Plus Jakarta Sans (Minimal UI)
+   Mobile First Responsive Typography
+   ========================================================================== */
+
+/* Hero Heading: Outfit, weight 700, geometric, line-height 1.15 */
+.font-hero-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.875rem, 1.45rem + 2.2vw, 4.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+/* Main Section Headings: Outfit, weight 700, line-height 1.2 */
+.font-section-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.25rem + 1.2vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Solution Headings: Outfit, weight 600–700 */
+.font-solution-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 2.15rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+/* Body Paragraphs: Plus Jakarta Sans, weight 400, line-height 1.7 */
+.font-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.68;
+}
+
+/* Navigation: Plus Jakarta Sans, weight 600, elegant tracking */
+.font-nav-label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Buttons: Plus Jakarta Sans, weight 600, letter-spacing 0.01em */
+.font-btn {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Eyebrow Labels: Plus Jakarta Sans, weight 700, uppercase, letter-spacing 0.12em */
+.font-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Global paragraph line-height default to 1.7 for sustained reading comfort */
+p {
+  line-height: 1.7;
+}
+
+/* Staggered entrance animations for mobile hero */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade-1 {
+  animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+.animate-hero-fade-2 {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+.animate-hero-fade-3 {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+.animate-hero-fade-4 {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+}
+.animate-hero-fade-5 {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
