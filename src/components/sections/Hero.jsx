@@ -156,13 +156,6 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
-          {/* Carousel Pagination: Centered, 22-26px below cards */}
-          <div className="flex items-center justify-center gap-1.5 mt-6 mb-2">
-            <span className="w-3.5 h-1.5 rounded-full bg-[#F47721]" />
-            <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-            <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-          </div>
         </div>
       </div>
 

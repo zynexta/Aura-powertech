@@ -47,8 +47,8 @@ const SOLUTIONS_DATA = [
     ],
     buttonText: "Explore Inverter Solutions",
     link: "/solutions#solar-inverters",
-    image: "/images/projects/client-deye-inverter-clean.jpg",
-    imageAlt: "Wall-mounted Deye hybrid solar inverter installation with ABB protection switchgear",
+    image: "/images/projects/deye-inverter-system.jpg",
+    imageAlt: "Commercial hybrid solar inverter installation with distribution switchgear",
     imageLeftOnDesktop: true
   }
 ];

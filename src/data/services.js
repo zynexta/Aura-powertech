@@ -69,7 +69,7 @@ export const SERVICES = [
     tagline: "The intelligent heart of your solar power ecosystem",
     shortDescription: "Advanced on-grid, off-grid, and hybrid solar inverters with intelligent digital display telemetry and smart power distribution equipment.",
     fullDescription: "The inverter determines how efficiently harvest energy is converted into stable usable alternating current. We deploy high-grade inverter solutions including Deye multi-MPPT systems, coupled with professional AC/DC distribution boxes, DC isolators, and surge protectors for safe, uninterrupted operation.",
-    image: "/images/projects/client-deye-inverter-clean.jpg",
+    image: "/images/projects/deye-inverter-system.jpg",
     benefits: [
       "High conversion efficiency with intelligent MPPT tracking",
       "Clear LCD interface and smart remote monitoring support",

@@ -20,7 +20,7 @@ export const PROJECTS = [
     title: "Deye Hybrid Inverter & ABB Protection Station",
     category: "Inverters & Electrical",
     categorySlug: "inverters",
-    image: "/images/projects/client-deye-inverter-clean.jpg",
+    image: "/images/projects/deye-inverter-system.jpg",
     location: "Thiruvananthapuram, Kerala",
     summary: "Wall-mounted Deye hybrid solar inverter system paired with ABB miniature circuit breakers (MCBs), AC/DC distribution boxes, and industrial conduit pipework.",
     details: [
