@@ -223,12 +223,30 @@ export default function Footer() {
 
                 {/* Content - Always Visible */}
                 <div className="border-t border-white/[0.08] mt-3.5 pt-3.5 space-y-3.5 text-[13px] xs:text-[13.5px]">
-                  {/* Address */}
+                  {/* Main Office Address */}
                   <div className="flex items-start gap-2.5 text-[#B5BED1]">
                     <MapPin className="w-4 h-4 text-[#FF7900] shrink-0 mt-0.5" />
-                    <address className="not-italic leading-relaxed">
-                      {COMPANY_INFO.address.formatted}
-                    </address>
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#FF7900] block mb-0.5">
+                        Main Office
+                      </span>
+                      <address className="not-italic leading-relaxed">
+                        {COMPANY_INFO.mainOffice.formatted}
+                      </address>
+                    </div>
+                  </div>
+
+                  {/* Branch Office Address */}
+                  <div className="flex items-start gap-2.5 text-[#B5BED1]">
+                    <MapPin className="w-4 h-4 text-[#FF7900] shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#FF7900] block mb-0.5">
+                        Branch Office
+                      </span>
+                      <address className="not-italic leading-relaxed">
+                        {COMPANY_INFO.branchOffice.formatted}
+                      </address>
+                    </div>
                   </div>
 
                   {/* Phone Numbers */}
@@ -396,12 +414,32 @@ export default function Footer() {
                 Contact Us
               </h3>
               <div className="space-y-3 text-xs sm:text-sm">
+                {/* Main Office */}
                 <div className="flex items-start gap-2.5 text-slate-300/90">
                   <MapPin className="w-4 h-4 text-[#F47721] shrink-0 mt-0.5" />
-                  <address className="not-italic text-xs leading-relaxed">
-                    {COMPANY_INFO.address.building}, {COMPANY_INFO.address.locality},<br />
-                    {COMPANY_INFO.address.city}, {COMPANY_INFO.address.state} – {COMPANY_INFO.address.pincode}, India.
-                  </address>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#F47721] block">
+                      Main Office
+                    </span>
+                    <address className="not-italic text-xs leading-relaxed text-slate-300">
+                      {COMPANY_INFO.mainOffice.building}, {COMPANY_INFO.mainOffice.locality},<br />
+                      {COMPANY_INFO.mainOffice.city}, {COMPANY_INFO.mainOffice.state} – {COMPANY_INFO.mainOffice.pincode}, India.
+                    </address>
+                  </div>
+                </div>
+
+                {/* Branch Office */}
+                <div className="flex items-start gap-2.5 text-slate-300/90">
+                  <MapPin className="w-4 h-4 text-[#F47721] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#F47721] block">
+                      Branch Office
+                    </span>
+                    <address className="not-italic text-xs leading-relaxed text-slate-300">
+                      {COMPANY_INFO.branchOffice.building}, {COMPANY_INFO.branchOffice.locality},<br />
+                      {COMPANY_INFO.branchOffice.city}, {COMPANY_INFO.branchOffice.state} – {COMPANY_INFO.branchOffice.pincode}, India.
+                    </address>
+                  </div>
                 </div>
 
                 <div className="flex flex-col space-y-1.5 pt-0.5">

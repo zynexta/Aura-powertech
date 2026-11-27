@@ -3,7 +3,33 @@ export const COMPANY_INFO = {
   tagline: "Smarter Solar. Brighter Future.",
   shortDescription: "Solar energy solutions company based in Thiruvananthapuram, Kerala, delivering engineering-led residential and commercial rooftop solar installations.",
   
-  // Official Business Address
+  // Official Business Addresses
+  mainOffice: {
+    title: "Main Office",
+    heading: "MAIN OFFICE",
+    building: "Building No: 14/3802",
+    locality: "Kudappanakunnu",
+    city: "Thiruvananthapuram",
+    state: "Kerala",
+    pincode: "695043",
+    country: "India",
+    formatted: "Building No: 14/3802, Kudappanakunnu, Thiruvananthapuram, Kerala – 695043, India",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Kudappanakunnu+Thiruvananthapuram+Kerala+695043"
+  },
+
+  branchOffice: {
+    title: "Branch Office",
+    heading: "BRANCH OFFICE",
+    building: "Opposite to CSI Church",
+    locality: "Amaravila",
+    city: "Thiruvananthapuram",
+    state: "Kerala",
+    pincode: "695122",
+    country: "India",
+    formatted: "Opposite to CSI Church, Amaravila, Thiruvananthapuram, Kerala – 695122, India"
+  },
+
+  // Retain existing address object for backward compatibility
   address: {
     building: "Building No: 14/3802",
     locality: "Kudappanakunnu",

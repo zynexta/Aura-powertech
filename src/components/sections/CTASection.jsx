@@ -46,7 +46,7 @@ export default function CTASection() {
 
         {/* Address confirmation */}
         <p className="text-[10px] sm:text-xs text-slate-300/80 pt-2 sm:pt-4">
-          Headquartered at Kudappanakunnu, Thiruvananthapuram, Kerala – 695043
+          Offices at Kudappanakunnu &amp; Amaravila, Thiruvananthapuram, Kerala
         </p>
 
       </div>

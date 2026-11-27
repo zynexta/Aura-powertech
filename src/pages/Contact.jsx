@@ -272,31 +272,55 @@ export default function Contact() {
             Reach out directly to our engineering team in Thiruvananthapuram via telephone, email, or WhatsApp.
           </p>
 
-          {/* Business Address Card */}
-          <a
-            href={COMPANY_INFO.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block group relative overflow-hidden rounded-[14px] p-4 border border-[#DCE6F4] bg-gradient-to-br from-[#F8FAFD] via-[#F0F5FC] to-[#E7F0FC] shadow-[0_5px_12px_rgba(31,75,130,0.08)] active:scale-[0.99] transition-all cursor-pointer"
-          >
-            {/* Header */}
-            <div className="flex items-center gap-2 mb-2">
-              <MapPin className="w-[17px] h-[17px] text-[#F47721] stroke-[2.2] shrink-0" />
-              <span className="text-[11.5px] font-extrabold uppercase tracking-[0.4px] text-[#12153D]">
-                BUSINESS ADDRESS
-              </span>
-            </div>
+          {/* Business Address Cards: Main Office & Branch Office */}
+          <div className="space-y-3">
+            {/* Main Office Card */}
+            <a
+              href={COMPANY_INFO.mainOffice.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group relative overflow-hidden rounded-[14px] p-4 border border-[#DCE6F4] bg-gradient-to-br from-[#F8FAFD] via-[#F0F5FC] to-[#E7F0FC] shadow-[0_5px_12px_rgba(31,75,130,0.08)] active:scale-[0.99] transition-all cursor-pointer"
+            >
+              {/* Header */}
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="w-[17px] h-[17px] text-[#F47721] stroke-[2.2] shrink-0" />
+                <span className="text-[11.5px] font-extrabold uppercase tracking-[0.4px] text-[#12153D]">
+                  MAIN OFFICE
+                </span>
+              </div>
 
-            {/* Address Lines */}
-            <div className="text-[11.5px] xs:text-[12px] text-[#12153D] leading-[1.55] relative z-10 max-w-[62%]">
-              <p className="font-bold text-[#12153D]">Building No: 14/3802</p>
-              <p className="font-medium text-[#12153D]/90">Kudappanakunnu, Thiruvananthapuram</p>
-              <p className="font-medium text-[#12153D]/90">Kerala – 695043, India.</p>
-            </div>
+              {/* Address Lines */}
+              <div className="text-[11.5px] xs:text-[12px] text-[#12153D] leading-[1.55] relative z-10 max-w-[62%]">
+                <p className="font-bold text-[#12153D]">{COMPANY_INFO.mainOffice.building}</p>
+                <p className="font-medium text-[#12153D]/90">{COMPANY_INFO.mainOffice.locality}, {COMPANY_INFO.mainOffice.city}</p>
+                <p className="font-medium text-[#12153D]/90">{COMPANY_INFO.mainOffice.state} – {COMPANY_INFO.mainOffice.pincode}, India.</p>
+              </div>
 
-            {/* Subtle Blue Palm Tree Landscape Silhouette */}
-            <PalmTreeSilhouettes className="absolute bottom-0 right-0 w-[44%] h-[68px] z-0" />
-          </a>
+              {/* Subtle Blue Palm Tree Landscape Silhouette */}
+              <PalmTreeSilhouettes className="absolute bottom-0 right-0 w-[44%] h-[68px] z-0" />
+            </a>
+
+            {/* Branch Office Card */}
+            <div className="block relative overflow-hidden rounded-[14px] p-4 border border-[#DCE6F4] bg-gradient-to-br from-[#F8FAFD] via-[#F0F5FC] to-[#E7F0FC] shadow-[0_5px_12px_rgba(31,75,130,0.08)]">
+              {/* Header */}
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="w-[17px] h-[17px] text-[#F47721] stroke-[2.2] shrink-0" />
+                <span className="text-[11.5px] font-extrabold uppercase tracking-[0.4px] text-[#12153D]">
+                  BRANCH OFFICE
+                </span>
+              </div>
+
+              {/* Address Lines */}
+              <div className="text-[11.5px] xs:text-[12px] text-[#12153D] leading-[1.55] relative z-10 max-w-[62%]">
+                <p className="font-bold text-[#12153D]">{COMPANY_INFO.branchOffice.building}</p>
+                <p className="font-medium text-[#12153D]/90">{COMPANY_INFO.branchOffice.locality}, {COMPANY_INFO.branchOffice.city}</p>
+                <p className="font-medium text-[#12153D]/90">{COMPANY_INFO.branchOffice.state} – {COMPANY_INFO.branchOffice.pincode}, India.</p>
+              </div>
+
+              {/* Subtle Blue Palm Tree Landscape Silhouette */}
+              <PalmTreeSilhouettes className="absolute bottom-0 right-0 w-[44%] h-[68px] z-0" />
+            </div>
+          </div>
 
           {/* Three Premium Contact Action Cards (1 Row, 3 Equal Columns) */}
           <div className="grid grid-cols-3 gap-2.5 mt-3.5">
@@ -498,10 +522,13 @@ export default function Contact() {
               Serving Trivandrum & Across Kerala
             </span>
             <h4 className="text-[15px] font-bold text-[#12153D]">
-              Visit Our Office at Kudappanakunnu
+              Visit Our Offices in Thiruvananthapuram
             </h4>
             <p className="text-[11px] text-slate-500 leading-relaxed">
-              Building No: 14/3802, Kudappanakunnu, Thiruvananthapuram, Kerala – 695043
+              <span className="font-semibold text-[#12153D]">Main Office:</span> {COMPANY_INFO.mainOffice.formatted}
+            </p>
+            <p className="text-[11px] text-slate-500 leading-relaxed">
+              <span className="font-semibold text-[#12153D]">Branch Office:</span> {COMPANY_INFO.branchOffice.formatted}
             </p>
             <div className="pt-1">
               <a
@@ -511,7 +538,7 @@ export default function Contact() {
                 className="inline-flex items-center justify-center gap-1.5 bg-[#12153D] text-white text-xs font-bold px-4 py-2.5 rounded-full transition-all w-full"
               >
                 <MapPin className="w-3.5 h-3.5 text-[#F47721]" />
-                <span>Open Google Maps</span>
+                <span>Open Main Office in Google Maps</span>
                 <ExternalLink className="w-3 h-3 ml-0.5" />
               </a>
             </div>
@@ -553,28 +580,44 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* Business Address Card */}
-                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#30358B]">
-                    <MapPin className="w-4 h-4 text-[#F47721]" />
-                    <span>Business Address</span>
-                  </div>
-                  <address className="not-italic text-sm text-slate-700 leading-relaxed">
-                    <strong>Building No: 14/3802</strong><br />
-                    Kudappanakunnu, Thiruvananthapuram<br />
-                    Kerala – 695043, India.
-                  </address>
+                {/* Main Office & Branch Office Cards */}
+                <div className="space-y-4">
+                  {/* Main Office Card */}
+                  <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#30358B]">
+                      <MapPin className="w-4 h-4 text-[#F47721]" />
+                      <span>Main Office</span>
+                    </div>
+                    <address className="not-italic text-sm text-slate-700 leading-relaxed">
+                      <strong>{COMPANY_INFO.mainOffice.building}</strong><br />
+                      {COMPANY_INFO.mainOffice.locality}, {COMPANY_INFO.mainOffice.city}<br />
+                      {COMPANY_INFO.mainOffice.state} – {COMPANY_INFO.mainOffice.pincode}, India.
+                    </address>
 
-                  <div className="pt-2">
-                    <a
-                      href={COMPANY_INFO.mapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F47721] hover:text-[#E06512] transition-colors py-1"
-                    >
-                      <span>Get Directions on Google Maps</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
+                    <div className="pt-2">
+                      <a
+                        href={COMPANY_INFO.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F47721] hover:text-[#E06512] transition-colors py-1"
+                      >
+                        <span>Get Directions on Google Maps</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Branch Office Card */}
+                  <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#30358B]">
+                      <MapPin className="w-4 h-4 text-[#F47721]" />
+                      <span>Branch Office</span>
+                    </div>
+                    <address className="not-italic text-sm text-slate-700 leading-relaxed">
+                      <strong>{COMPANY_INFO.branchOffice.building}</strong><br />
+                      {COMPANY_INFO.branchOffice.locality}, {COMPANY_INFO.branchOffice.city}<br />
+                      {COMPANY_INFO.branchOffice.state} – {COMPANY_INFO.branchOffice.pincode}, India.
+                    </address>
                   </div>
                 </div>
 
@@ -772,15 +815,18 @@ export default function Contact() {
         <section className="py-12 bg-slate-50 border-t border-slate-200">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xs bg-white p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="space-y-1 text-center md:text-left">
+              <div className="space-y-1.5 text-center md:text-left">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#F47721]">
                   Serving Trivandrum & Across Kerala
                 </span>
                 <h3 className="text-xl font-bold text-[#30358B]">
-                  Visit Our Office at Kudappanakunnu, Thiruvananthapuram
+                  Visit Our Offices in Thiruvananthapuram
                 </h3>
-                <p className="text-xs text-slate-500">
-                  Building No: 14/3802, Kudappanakunnu, Thiruvananthapuram, Kerala – 695043
+                <p className="text-xs text-slate-600">
+                  <strong className="text-[#30358B]">Main Office:</strong> {COMPANY_INFO.mainOffice.formatted}
+                </p>
+                <p className="text-xs text-slate-600">
+                  <strong className="text-[#30358B]">Branch Office:</strong> {COMPANY_INFO.branchOffice.formatted}
                 </p>
               </div>
 
@@ -791,7 +837,7 @@ export default function Contact() {
                 className="inline-flex items-center justify-center gap-2 bg-[#30358B] hover:bg-[#1E2260] active:bg-[#12153D] text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full shadow-xs transition-all whitespace-nowrap min-h-[44px]"
               >
                 <MapPin className="w-4 h-4 text-[#F47721]" />
-                <span>Open Google Maps</span>
+                <span>Open Main Office in Maps</span>
                 <ExternalLink className="w-3.5 h-3.5 ml-1" />
               </a>
             </div>
